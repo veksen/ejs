@@ -1082,6 +1082,13 @@ suite('comments', function () {
 });
 
 suite('require', function () {
+  test('fully render with using a required function', function () {
+    assert.equal(ejs.render(fixture('with-require.ejs', { myStr: 'ayy' })),
+        '<b>AYY</b>');
+  });
+});
+
+suite('require', function () {
 
   // Only works with inline/preprocessor includes
   test('allow ejs templates to be required as node modules', function () {
